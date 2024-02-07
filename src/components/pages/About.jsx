@@ -1,8 +1,10 @@
+
 import React from "react";
 import ContactForm from "../ContactForm";
 
 const About = () => {
   return (
+
     <div className="about-page">
       <h2>About</h2>
       <p>
@@ -12,8 +14,8 @@ const About = () => {
       </p>
 
       <ContactForm />
-    </div>
-  );
-};
+    </div>)}
 
 export default About;
+
+

@@ -20,9 +20,5 @@ const About = () => {
 
 export default About;
 
-      <ContactForm />
-    </div>)}
-
-export default About;
 
 

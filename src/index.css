@@ -1,9 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,200&family=Space+Grotesk&display=swap");
+
 /*Document*/
 *{
 
 }
 
 /*NAVBAR*/
+
+
+li a {
+  color: white !important;
+  font-size: 26px;
+  font-family: "Courier New", Courier, monospace;
+}
+.navbar-toggler-icon {
+  background-color: white
+}
+/* .nav-item {
+  color: white !important;
+} */
+
+a:hover {
+  color: #0e7474 !important;
+}
+
 
 /*HOMEPAGE*/
 

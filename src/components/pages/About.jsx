@@ -14,8 +14,11 @@ const About = () => {
       </p>
 
       <ContactForm />
-    </div>)}
+    </div>
+  );
+};
 
 export default About;
+
 
 

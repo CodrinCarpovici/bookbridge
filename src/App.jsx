@@ -5,17 +5,23 @@ import About from './components/pages/About'
 import BookPage from './components/pages/BookPage'
 import Bookshelf from './components/pages/Bookshelf'
 import Footer from './components/Footer'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header'
 
 
 function App() {
 
   return (
-    <>
-      <Navbar />
-      <Homepage />
-      <About />
+    <Router>
+      <Header />
+      <Routes>
+      <Route path='/' element= {Homepage} />
+      <Route path='/about' element={About}/> 
+      <Route path='book-page' element={BookPage}/>
+      <Route path='book-shelf' element={Bookshelf}/>
+      </Routes>
       <Footer />
-    </>
+    </Router>
   )
 }
 

@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import * as userEvent from '@testing-library/user-event';
+import { BrowserRouter as Router } from 'react-router-dom'
 import App from '../App';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -15,7 +16,11 @@ it('App Component Renders Without Error', () => {
 });
 
 it('Header Component Renders Without Error', () => {
-  render(<Header />);
+  render(
+      <Router>
+          <Header />
+      </Router>
+  );
 });
 
 it('Footer Component Renders Without Error', () => {

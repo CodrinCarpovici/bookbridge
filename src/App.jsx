@@ -5,7 +5,6 @@ import About from './components/pages/About'
 import BookPage from './components/pages/BookPage'
 import Bookshelf from './components/pages/Bookshelf'
 import Footer from './components/Footer'
-import Header from './components/Header'
 import Navbar from './components/Navbar';
 
 

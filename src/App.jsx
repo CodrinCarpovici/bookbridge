@@ -7,6 +7,7 @@ import Bookshelf from './components/pages/Bookshelf'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import Navbar from './components/Navbar';
+import SearchBar from './components/SearchBar';
 
 
 
@@ -15,6 +16,7 @@ function App() {
   return (
     <Router>
       <Navbar />
+      <SearchBar/>
       <Routes>
       <Route path='/' element= {<Homepage/>} />
       <Route path='/about' element={<About/>}/> 

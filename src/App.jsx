@@ -6,6 +6,7 @@ import BookPage from './components/pages/BookPage'
 import Bookshelf from './components/pages/Bookshelf'
 import Footer from './components/Footer'
 import Header from './components/Header'
+import Navbar from './components/Navbar';
 
 
 
@@ -13,7 +14,7 @@ function App() {
 
   return (
     <Router>
-      <Header />
+      <Navbar />
       <Routes>
       <Route path='/' element= {<Homepage/>} />
       <Route path='/about' element={<About/>}/> 

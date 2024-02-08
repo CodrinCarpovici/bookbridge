@@ -1,47 +1,21 @@
-
-
 import React from "react";
 
 const Footer = () => {
   return (
-    <footer style={footerStyle}>
-      <div style={containerStyle}>
+    <footer id="footer">
+      <div className="footer-container">
         <p>© 2024 Book Bridge. All rights reserved.</p>
-        <div style={linkContainerStyle}>
-          <a href="/privacy-policy" style={linkStyle}>
+        <div className="footer-link-container">
+          <a href="/privacy-policy" className="footer-link">
             Privacy Policy
           </a>
-          <a href="/contact" style={linkStyle}>
+          <a href="/contact" className="footer-link">
             Contact Us
           </a>
         </div>
       </div>
     </footer>
   );
-};
-
-const footerStyle = {
-  background: "#333",
-  color: "white",
-  textAlign: "center",
-  padding: "10px 0",
-};
-
-const containerStyle = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-};
-
-const linkContainerStyle = {
-  marginTop: "10px",
-};
-
-const linkStyle = {
-  color: "white",
-  textDecoration: "none",
-  margin: "0 10px",
 };
 
 export default Footer;

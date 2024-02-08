@@ -33,6 +33,9 @@ a:hover {
 /*SEARCHBAR*/
 
 /*BOOKCARD*/
+.card {
+  width: 18rem;
+}
 
 /*ABOUT*/
 

@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,200&family=Space+Grotesk&display=swap");
-@import '@fortawesome/fontawesome-free/css/all.css';
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+:root {
+  --font-family: "Times New Roman", Times, serif;
+  --font-color: black;
+}
 
 /*Document*/
 * {
@@ -10,7 +15,7 @@
 li a {
   color: white !important;
   font-size: 26px;
-  font-family: "Courier New", Courier, monospace;
+  font-family: var(--font-family);
 }
 .navbar-toggler-icon {
   background-color: white;
@@ -30,14 +35,33 @@ a:hover {
 /*HOMEPAGE*/
 
 /*HEADER*/
-
-/*SEARCHBAR*/
-
-.form-control{
- margin-right: 10px;
+/* Header.css */
+.header-background {
+  height: 80vh; /* Full height of the viewport */
+  background-size: cover; /* Cover the entire header area */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#header-title {
+  font-family: var(--font-family);
+  color: black;
+  font-size: 100px;
 }
 
+#header-subtitle {
+  font-family: var(--font-family);
+  color: black;
+  font-size: 60px;
+}
+/*SEARCHBAR*/
 
+.form-control {
+  margin-right: 10px;
+}
 
 /*BOOKCARD*/
 .card {
@@ -58,6 +82,7 @@ a:hover {
   color: white;
   text-align: center;
   padding: 10px 0;
+  font-family: var(--font-family);
 }
 
 .footer-container {
@@ -68,7 +93,7 @@ a:hover {
 }
 
 .footer-link-container {
-  margin-top: 10px,
+  margin-top: 10px;
 }
 
 .footer-link {

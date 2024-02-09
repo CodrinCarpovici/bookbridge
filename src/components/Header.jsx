@@ -1,14 +1,22 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import  Navbar from './Navbar';
-import headerImg from '../assets/headerphoto.jpeg';
+import React from "react";
+import headerImg from "../assets/headerphoto.jpeg";
+import SearchBar from "./SearchBar";
 
 const Header = () => {
   return (
-    <header id="header">
-      <img id="header-image" src= {headerImg} alt="Book" />
-      <h1 id="header-title">BOOK BRIDGE</h1>
-      <h2 id="header-subtitle">Search for your book.</h2>
+    <header
+      className="header-background d-flex flex-column justify-content-center align-items-center text-center"
+      style={{ backgroundImage: `url(${headerImg})`, height: "100vh" }}
+    >
+      <div>
+        <h1 id="header-title">BOOK BRIDGE</h1>
+        <h2 id="header-subtitle">
+          Connect to the Stories That Shape Our World
+        </h2>
+      </div>
+      <div className="w-100 d-flex justify-content-center mt-4">
+        <SearchBar />
+      </div>
     </header>
   );
 };

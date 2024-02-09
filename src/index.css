@@ -4,10 +4,25 @@
 :root {
   --font-family: "Times New Roman", Times, serif;
   --font-color: black;
+  --background--color: #d5c8b8;
 }
 
 /*Document*/
 * {
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  background-color: var(--background--color);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /*NAVBAR*/
@@ -37,10 +52,10 @@ a:hover {
 /*HEADER*/
 /* Header.css */
 .header-background {
-  height: 80vh; /* Full height of the viewport */
-  background-size: cover; /* Cover the entire header area */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Do not repeat the image */
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,6 +88,48 @@ a:hover {
 /*CONTACT*/
 
 /*BOOKPAGE*/
+#book-image {
+  max-width: 400px;
+  height: 500px;
+}
+
+#main-content {
+  flex: 1;
+}
+
+#details-container {
+  padding: 20px;
+  font-family: var(--font-family);
+}
+
+#book-title {
+  font-size: 60px;
+  color: var(--font-color);
+  margin-bottom: 0.5em;
+}
+
+#book-author,
+#book-description,
+#book-rating,
+#book-year {
+  font-size: 20px;
+  color: var(--font-color);
+  margin-bottom: 15px;
+}
+
+.rating strong {
+  margin-right: 0.5em;
+}
+
+.star {
+  font-size: 1.25em;
+  color: #ffc107;
+}
+
+.star-empty {
+  font-size: 1.25em;
+  color: #e4e5e9;
+}
 
 /*AMAZONCAROUSEL*/
 

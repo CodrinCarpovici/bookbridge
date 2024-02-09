@@ -125,8 +125,91 @@ li a {
 
 
 /*ABOUT*/
+.about-page {
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 12px;
+  margin-bottom: 15px;
+}
+.about-section {
+  background: url('/src/assets/aboutimage.webp');
+  background-size: center;
+  background-position: center;
+  color: white;
+  padding: 20px;
+}
+
+.about-page h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-subtitle {
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/*Cards within About*/
+.card {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.card-body {
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
 
 /*CONTACT*/
+.contact-form {
+  max-width: 550px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #959292;
+  border-radius: 3px;
+}
+
+.contact-form textarea {
+  resize: vertical; 
+}
+
+.contact-form button {
+  width: 70%;
+  padding: 10px 20px;
+  background-color: rgb(40, 114, 40);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 13.9%;/*submit button in the middle of the form*/
+}
+
+.contact-form button:hover {
+  background-color: rgb(123, 148, 86);
+}
 
 /*BOOKPAGE*/
 #book-image {

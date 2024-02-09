@@ -24,7 +24,7 @@ li a {
   color: white !important;
 } */
 
-a:hover {
+.navbar a:hover {
   color: #0e7474 !important;
 }
 
@@ -65,8 +65,49 @@ a:hover {
 
 /*BOOKCARD*/
 .card {
-  width: 18rem;
+  width: 15rem;
+  
+
 }
+.card-img-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  ;
+}
+
+.card-img {
+  width: 80%;
+  filter: blur(0); 
+  transition: filter 0.3s ease-in-out;
+}
+
+.card-hover-content {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  padding: 10px;
+  opacity: 0; 
+  transition: opacity 0.3s ease-in-out; 
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  
+  
+}
+
+.card:hover .card-img {
+  filter: blur(3px);
+}
+
+.card:hover .card-hover-content {
+  opacity: 1;
+}
+
+
 
 /*ABOUT*/
 

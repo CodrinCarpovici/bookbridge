@@ -10,7 +10,7 @@ const Bookshelf = () => {
       <h1>My Bookshelf</h1>
       <div className="bookshelf">
         {books.map((book, index) => (
-          <div
+          <motion.div
             key={index}
             className="book"
             layout
@@ -26,7 +26,7 @@ const Bookshelf = () => {
                 <p>Status: {book.status}</p>
               </div>
             )}
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

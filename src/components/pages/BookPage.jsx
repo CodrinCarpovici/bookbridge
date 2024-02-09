@@ -1,43 +1,57 @@
 import React from "react";
+import bookCoverDemo from "../../assets/bookCoverDemo.jpeg";
 
 const BookPage = () => {
+  // Mock data for demonstration
+  const mockBook = {
+    title: "Sample Book Title",
+    author: "John Doe",
+    year: 1900,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et tellus vitae massa posuere viverra.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et tellus vitae massa posuere viverra.",
+    rating: 1, // Assuming this is a number out of 5
+  };
+
+  // Function to render stars
+  const renderStars = (rating) => {
+    let stars = [];
+    for (let i = 0; i < 5; i++) {
+      stars.push(
+        <span key={i} style={{ color: i < rating ? "#ffc107" : "#e4e5e9" }}>
+          {i < rating ? "★" : "☆"}
+        </span>
+      );
+    }
+    return stars;
+  };
+
   return (
-    <div className="container mt-4">
+    <div className="container mt-4" id="main-content">
       <div className="row">
         <div className="col-md-4">
           {/* Book cover image */}
-          <img src={coverImage} alt="Book Cover" className="img-fluid" />
+          <img
+            src={bookCoverDemo}
+            id="book-image"
+            alt="Book Cover"
+            className="img-fluid"
+          />
         </div>
-        <div className="col-md-8">
+        <div className="col-md-8" id="details-container">
           {/* Book details */}
-          <h2>{title}</h2>
-          <p>
-            <strong>Author:</strong> {author}
+          <h2 id="book-title">{mockBook.title}</h2>
+          <p id="book-author">
+            <strong>Author:</strong> {mockBook.author}
           </p>
-          <p>
-            <strong>Description:</strong> {description}
+          <p id="book-year">
+            <strong>Year:</strong> {mockBook.year}
           </p>
-          <p>
-            <strong>Plot:</strong> {plot}
+          <p id="book-description">
+            <strong>Description:</strong> {mockBook.description}
           </p>
-        </div>
-      </div>
-      <div className="row">
-        <h4 className="mt-4">Amazon Suggestions</h4>
-        {/* Placeholder for Amazon suggestions */}
-        <div className="col-6 col-md-4">
-          <div className="card">
-            <div className="card-body">Suggestion 1</div>
-          </div>
-        </div>
-        <div className="col-6 col-md-4">
-          <div className="card">
-            <div className="card-body">Suggestion 2</div>
-          </div>
-        </div>
-        <div className="col-6 col-md-4">
-          <div className="card">
-            <div className="card-body">Suggestion 3</div>
+          <div id="book-rating">
+            <strong>Rating:</strong>
+            <span className="ml-2">{renderStars(mockBook.rating)}</span>
           </div>
         </div>
       </div>

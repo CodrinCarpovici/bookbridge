@@ -5,6 +5,16 @@ const Bookshelf = () => {
   const [books, setBooks] = useState([]);
   const [selectedBook, setSelectedBook] = useState(null);
 
+  const handleAddBook = (book) => {
+    setBooks([...books, book]);
+  };
+
+  const handleStatusChange = (index, status) => {
+    const updatedBooks = [...books];
+    updatedBooks[index].status = status;
+    setBooks(updatedBooks);
+  };
+
   return (
     <div>
       <h1>My Bookshelf</h1>

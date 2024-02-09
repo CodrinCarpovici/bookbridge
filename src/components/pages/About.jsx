@@ -1,8 +1,6 @@
 
 import React from "react";
 import ContactForm from "../ContactForm";
-import "./index.css";
-
 
 const About = () => {
   return (

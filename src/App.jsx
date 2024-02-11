@@ -1,4 +1,4 @@
-import { useState ,useState} from 'react'
+import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Homepage from './components/pages/Homepage'
 import About from './components/pages/About'
@@ -54,7 +54,6 @@ function App() {
       <Route path='/about' element={<About/>}/> 
       <Route path='/book-page' element={<BookPage/>}/>
       <Route path='/book-page' element={<BookPage  search={search} books={books} handleChange={handleChange} handleSubmit={handleSubmit} />}/>
-
       <Route path='/book-shelf' element={<Bookshelf/>}/>
       </Routes>
       <Footer />

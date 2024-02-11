@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import book from "../assets/book.jpg";
 
-const BookCard = ({ coverImg,title, author, releaseYear }) => {
+
+const BookCard = ({ books,coverImg,title, author, releaseYear }) => {
   return (
     <div className="card">
       <Link to="/book-page">

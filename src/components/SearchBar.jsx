@@ -1,16 +1,6 @@
 import React, { useState } from 'react';
 
-const SearchBar = () => {
-  const [search, setSearch] = useState('');
-
-  const handleChange = (e) => {
-    setSearch(e.target.value);
-  };
-
-  const handleSubmit = () => {
-    console.log(search);
-    setSearch('');
-  };
+const SearchBar = ({books,search, handleChange,handleSubmit}) => {
 
   return (
     <div className="container mt-3">

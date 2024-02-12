@@ -1,8 +1,9 @@
 import React from "react";
 import headerImg from "../assets/headerphoto.jpeg";
 import SearchBar from "./SearchBar";
+import BookCard from "./BookCard";
 
-const Header = () => {
+const Header = ({handleChange, handleSubmit, books, search}) => {
   return (
     <header
       className="header-background d-flex flex-column justify-content-center align-items-center text-center"
@@ -15,7 +16,8 @@ const Header = () => {
         </h2>
       </div>
       <div className="w-100 d-flex justify-content-center mt-4">
-        <SearchBar />
+        <SearchBar search={search} books={books} handleChange={handleChange} handleSubmit={handleSubmit}/>
+        {books.map((book) => (<BookCard  key= {book.id} coverImg ={book.volumeInfo.imageLinks.thumbnail} title={book.title} author={books.authors} releaseYear={books.publishedDate} />) )}
       </div>
     </header>
   );

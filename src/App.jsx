@@ -17,42 +17,64 @@ function App() {
 
   const apiKey = "AIzaSyBaXf-WaFNjuXH_bgd4jUptijqnQjKFmMk"
 
-  useEffect(() => {
-    const fetchBooks = async () => {
-      try {
-        const response = await fetch(
-          `https://www.googleapis.com/books/v1/volumes?q=${search}&key=${apiKey}`
-        );
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        setBooks(data.items);
-        console.log(data.items)
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
+  // useEffect(() => {
+  //   const debounceTimer = setTimeout(() => {
+  //   const fetchBooks = async () => {
+  //     try {
+  //       const response = await fetch(
+  //         `https://www.googleapis.com/books/v1/volumes?q=${search}&key=${apiKey}`
+  //       );
+  //       if (!response.ok) {
+  //         throw new Error('Network response was not ok');
+  //       }
+  //       const data = await response.json();
+  //       setBooks(data.items);
+  //       console.log(data.items)
+  //     } catch (error) {
+  //       console.error('Error fetching data:', error);
+  //     }
+  //   }
 
-    if (search !== '') {
-      fetchBooks();
-    }
-  }, [search])
+  //   if (search !== '') {
+  //     fetchBooks();
+  //   }},1000);
+  //   return () => clearTimeout(debounceTimer)
+  // }, [])
 
   const handleChange = (event) => {
     setSearch(event.target.value);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-  };
+  const handleSubmit = () => {
+    fetchData()}
+
+    const fetchData = () => {
+      const fetchBooks = async () => {
+        try {
+          const response = await fetch(
+            `https://www.googleapis.com/books/v1/volumes?q=${search}&key=${apiKey}`
+          );
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          const data = await response.json();
+          setBooks(data.items);
+          console.log(data.items)
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        }
+      }
+      if (search !== '') {
+        fetchBooks();
+      }
+    }
   return (
     <Router>
       <Navbar />
       <Routes>
-      <Route path='/' element= {<Homepage/>} />
+      <Route path='/' element= {<Homepage search={search} books={books} handleChange={handleChange} handleSubmit={handleSubmit}/>} />
       <Route path='/about' element={<About/>}/> 
-      <Route path='/book-page' element={<BookPage  search={search} books={books} handleChange={handleChange} handleSubmit={handleSubmit} />}/>
+      <Route path='/book-page' element={<BookPage/>}/>
       <Route path='/book-shelf' element={<Bookshelf/>}/>
       </Routes>
       <Footer />

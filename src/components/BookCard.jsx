@@ -9,6 +9,7 @@ const BookCard = ({ books,coverImg,title, author, releaseYear }) => {
     <div className="card">
       <Link to="/book-page">
         <motion.div whileHover={{ scale: 1.15 }}className="card-img-container">
+          
           <img src={coverImg} alt="Book Cover" className="card-img" />
           <div className="card-hover-content">
             <h5 className="card-title">{title}</h5>

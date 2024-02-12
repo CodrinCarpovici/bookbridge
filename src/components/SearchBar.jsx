@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const SearchBar = ({books,search, handleChange,handleSubmit}) => {
+const SearchBar = ({search, handleChange,handleSubmit}) => {
 
   return (
     <div className="container mt-3">

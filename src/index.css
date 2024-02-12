@@ -80,9 +80,7 @@ li a {
 
 /*BOOKCARD*/
 .card {
-  width: 15rem;
-  
-
+  width: 25rem;
 }
 .card-img-container {
   position: relative;

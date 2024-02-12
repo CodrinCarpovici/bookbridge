@@ -2,6 +2,7 @@ import React from "react";
 import headerImg from "../assets/headerphoto.jpeg";
 import SearchBar from "./SearchBar";
 import BookCard from "./BookCard";
+import bookCoverDemo from "../assets/bookCoverDemo.jpeg"
 
 const Header = ({ handleChange, handleSubmit, books, search }) => {
   return (
@@ -26,7 +27,10 @@ const Header = ({ handleChange, handleSubmit, books, search }) => {
           books.map((book) => (
             <BookCard
               key={book.id}
-              coverImg={book.volumeInfo.imageLinks.thumbnail}
+              coverImg={book.volumeInfo.imageLinks
+              
+                ? book.volumeInfo.imageLinks.thumbnail : bookCoverDemo
+              }
               title={book.volumeInfo.title}
               author={
                 book.volumeInfo.authors ? book.volumeInfo.authors[0] : "Unknown"

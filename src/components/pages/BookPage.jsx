@@ -25,10 +25,16 @@ const BookPage = ({handleChange, handleSubmit, books, search}) => {
     return stars;
   };
 
+  // Mock function to simulate adding a book to the bookshelf
+  const addToBookshelf = () => {
+    alert(`${mockBook.title} was added to your bookshelf!`);
+    // + logic to actually add the book to the user's bookshelf
+  };
+
   return (
     <div className="container mt-4" id="main-content">
       <div className="row">
-        <div className="col-md-4">
+        <div className="col-md-4 text-center d-flex align-items-center justify-content-center">
           {/* Book cover image */}
           <img
             src={bookCoverDemo}
@@ -53,6 +59,14 @@ const BookPage = ({handleChange, handleSubmit, books, search}) => {
             <strong>Rating:</strong>
             <span className="ml-2">{renderStars(books.rating)}</span>
           </div>
+          {/* Add to Bookshelf button */}
+          <button
+            className="btn btn-primary mt-3"
+            onClick={addToBookshelf}
+            id="button-shelf"
+          >
+            Add to your Book Shelf
+          </button>
         </div>
       </div>
     </div>

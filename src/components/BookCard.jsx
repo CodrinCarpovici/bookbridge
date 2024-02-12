@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import book from "../assets/book.jpg";
+// import book from "../assets/book.jpg";
 
 
 const BookCard = ({ books,coverImg,title, author, releaseYear }) => {

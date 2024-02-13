@@ -14,7 +14,7 @@ const About = () => {
         </p>
         </div>
       <div className="row">
-        <div className="col-sm-12 col-md-6 my-2 d-flex justify-content-center">
+        <div className="col-sm-12 col-md-4 my-2 d-flex justify-content-center">
           <div className="card h-100">
           <img src="/src/assets/card1image.jpg" className="card-img-top" alt="Image 1" />
             <div className="card-body">
@@ -23,7 +23,16 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="col-sm-12 col-md-6 my-2 d-flex justify-content-center">
+        <div className="col-sm-12 col-md-4 my-2 d-flex justify-content-center">
+          <div className="card h-100">
+          <img src="/src/assets/card1image.jpg" className="card-img-top" alt="Image 1" />
+            <div className="card-body">
+              <h5 className="card-title">What is BookBridge?</h5>
+              <p className="card-text"> BookBridge is a book library where you can search for your favorite books and find their details. You can also create your own list of must-read books.</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-sm-12 col-md-4 my-2 d-flex justify-content-center">
           <div className="card h-100">
           <img src="/src/assets/card2image.jpeg" className="card-img-top" alt="Image 2" />
             <div className="card-body">

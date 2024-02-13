@@ -129,9 +129,10 @@ li a {
 /*ABOUT*/
 .about-page {
   max-width: 95%;
-  margin: 0 auto;
   padding: 12px;
   margin-bottom: 15px;
+  margin-left: 70px;
+  margin-right: 70px;
 }
 .about-section {
   background: url("/src/assets/aboutimage.webp");
@@ -156,27 +157,27 @@ li a {
 
 /*Cards within About*/
 .card {
+  width: 73%;
   margin-bottom: 20px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .card-body {
-  padding: 10px;
+  padding: 15px;
   margin-top: 5px;
 }
 
 .card-img-top {
-  height: 200px;
+  height: 150px;
   object-fit: cover;
 }
 
 /*CONTACT*/
 .contact-form {
-  max-width: 550px;
+  width: 75%;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 5px;
+  background-color: #d5c8b8;
   margin-top: 40px;
 }
 
@@ -190,8 +191,7 @@ li a {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #959292;
-  border-radius: 3px;
+  border: 1px solid #d5c8b8;
 }
 
 .contact-form textarea {

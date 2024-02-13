@@ -13,30 +13,6 @@ function App() {
 
   const apiKey = "AIzaSyBaXf-WaFNjuXH_bgd4jUptijqnQjKFmMk";
 
-  // useEffect(() => {
-  //   const debounceTimer = setTimeout(() => {
-  //   const fetchBooks = async () => {
-  //     try {
-  //       const response = await fetch(
-  //         `https://www.googleapis.com/books/v1/volumes?q=${search}&key=${apiKey}`
-  //       );
-  //       if (!response.ok) {
-  //         throw new Error('Network response was not ok');
-  //       }
-  //       const data = await response.json();
-  //       setBooks(data.items);
-  //       console.log(data.items)
-  //     } catch (error) {
-  //       console.error('Error fetching data:', error);
-  //     }
-  //   }
-
-  //   if (search !== '') {
-  //     fetchBooks();
-  //   }},1000);
-  //   return () => clearTimeout(debounceTimer)
-  // }, [])
-
   const handleChange = (event) => {
     setSearch(event.target.value);
   };

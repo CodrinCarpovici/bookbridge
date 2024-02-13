@@ -57,7 +57,17 @@ function App() {
           }
         />
         <Route path="/about" element={<About />} />
-        <Route path="/book-page" element={<BookPage />} />
+        <Route
+          path="/book-page"
+          element={
+            <BookPage
+              search={search}
+              books={books}
+              handleChange={handleChange}
+              handleSubmit={handleSubmit}
+            />
+          }
+        />
         <Route path="/book-shelf" element={<Bookshelf />} />
       </Routes>
       <Footer />

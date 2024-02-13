@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 
 const BookCard = ({ books,coverImg,title, author, releaseYear }) => {
   return (
-    <div className="card m-1">
+    <div className="card col-lg-2 col-sm-12 m-1">
       <Link to="/book-page">
-        <motion.div whileHover={{ scale: 1.15 }}className="card-img-container">
+        <motion.div whileHover={{ scale: 1.5 }}className="card-img-container">
           
           <img src={coverImg} alt="Book Cover" className="card-img" />
           <div className="card-hover-content">

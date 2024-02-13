@@ -5,6 +5,7 @@ import BookCard from "./BookCard";
 import bookCoverDemo from "../assets/bookCoverDemo.jpeg";
 
 const Header = ({ handleChange, handleSubmit, books, search }) => {
+
   
   return (
     <header
@@ -25,7 +26,9 @@ const Header = ({ handleChange, handleSubmit, books, search }) => {
           handleSubmit={handleSubmit}
         />
         </div>
-        <div className="w-100 d-flex justify-content-center mt-4">
+
+        <div className="row d-flex justify-content-center mt-4">
+
         {books && books.length > 0 ? (
           books.map((book) => (
             <BookCard

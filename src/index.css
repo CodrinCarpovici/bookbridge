@@ -93,11 +93,14 @@ li a {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
+  height: 100% !important;
 }
 
 .card-img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  max-height: 300px;
+  object-fit: cover;
   filter: blur(0);
   transition: filter 0.3s ease-in-out;
   object-fit: cover !important;

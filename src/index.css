@@ -80,7 +80,7 @@ li a {
 
 /*BOOKCARD*/
 .card {
-  max-width: 250px; /* Adjust as needed */
+  max-width: 250px; 
   width: 100%;
 }
 
@@ -92,7 +92,7 @@ li a {
 
 .card-img {
   width: 100%;
-  height: auto; /* Ensure image maintains aspect ratio */
+  height: auto;
   filter: blur(0);
   transition: filter 0.3s ease-in-out;
 }

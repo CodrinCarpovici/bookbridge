@@ -10,32 +10,9 @@ import Navbar from "./components/Navbar";
 function App() {
   const [search, setSearch] = useState("");
   const [books, setBooks] = useState([]);
+  const [loading, setLoading] = useState(false)
 
   const apiKey = "AIzaSyBaXf-WaFNjuXH_bgd4jUptijqnQjKFmMk";
-
-  // useEffect(() => {
-  //   const debounceTimer = setTimeout(() => {
-  //   const fetchBooks = async () => {
-  //     try {
-  //       const response = await fetch(
-  //         `https://www.googleapis.com/books/v1/volumes?q=${search}&key=${apiKey}`
-  //       );
-  //       if (!response.ok) {
-  //         throw new Error('Network response was not ok');
-  //       }
-  //       const data = await response.json();
-  //       setBooks(data.items);
-  //       console.log(data.items)
-  //     } catch (error) {
-  //       console.error('Error fetching data:', error);
-  //     }
-  //   }
-
-  //   if (search !== '') {
-  //     fetchBooks();
-  //   }},1000);
-  //   return () => clearTimeout(debounceTimer)
-  // }, [])
 
   const handleChange = (event) => {
     setSearch(event.target.value);
@@ -47,6 +24,7 @@ function App() {
 
   const fetchData = () => {
     const fetchBooks = async () => {
+      setLoading(true)
       try {
         const response = await fetch(
           `https://www.googleapis.com/books/v1/volumes?q=${search}&key=${apiKey}`
@@ -60,6 +38,8 @@ function App() {
       } catch (error) {
         console.error("Error fetching data:", error);
       }
+      finally {
+        setLoading(false)}
     };
     if (search !== "") {
       fetchBooks();
@@ -77,11 +57,23 @@ function App() {
               books={books}
               handleChange={handleChange}
               handleSubmit={handleSubmit}
+              loading={loading}
             />
           }
         />
         <Route path="/about" element={<About />} />
-        <Route path="/book-page" element={<BookPage />} />
+        <Route
+          path="/book-page"
+          element={
+            <BookPage
+              search={search}
+              books={books}
+              handleChange={handleChange}
+              handleSubmit={handleSubmit}
+              loading={loading}
+            />
+          }
+        />
         <Route path="/book-shelf" element={<Bookshelf />} />
       </Routes>
       <Footer />

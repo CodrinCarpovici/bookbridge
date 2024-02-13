@@ -10,6 +10,7 @@ import Navbar from "./components/Navbar";
 function App() {
   const [search, setSearch] = useState("");
   const [books, setBooks] = useState([]);
+  const [loading, setLoading] = useState(false)
 
   const apiKey = "AIzaSyBaXf-WaFNjuXH_bgd4jUptijqnQjKFmMk";
 
@@ -23,6 +24,7 @@ function App() {
 
   const fetchData = () => {
     const fetchBooks = async () => {
+      setLoading(true)
       try {
         const response = await fetch(
           `https://www.googleapis.com/books/v1/volumes?q=${search}&key=${apiKey}`
@@ -36,6 +38,8 @@ function App() {
       } catch (error) {
         console.error("Error fetching data:", error);
       }
+      finally {
+        setLoading(false)}
     };
     if (search !== "") {
       fetchBooks();
@@ -53,6 +57,7 @@ function App() {
               books={books}
               handleChange={handleChange}
               handleSubmit={handleSubmit}
+              loading={loading}
             />
           }
         />
@@ -65,6 +70,7 @@ function App() {
               books={books}
               handleChange={handleChange}
               handleSubmit={handleSubmit}
+              loading={loading}
             />
           }
         />

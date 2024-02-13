@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
 const SearchBar = ({search, handleChange,handleSubmit}) => {
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      handleSubmit();
+    }}
 
   return (
     <div className="container mt-3">
@@ -13,6 +17,7 @@ const SearchBar = ({search, handleChange,handleSubmit}) => {
               placeholder="Search for a book"
               value={search}
               onChange={handleChange}
+              onKeyPress={handleKeyPress}
             />
             <div className="input-group-append">
               <button className="btn btn-dark" type="button" onClick={handleSubmit}>

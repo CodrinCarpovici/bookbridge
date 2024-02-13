@@ -3,12 +3,11 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 // import book from "../assets/book.jpg";
 
-
-const BookCard = ({ books,coverImg,title, author, releaseYear }) => {
+const BookCard = ({ books, coverImg, title, author, releaseYear, bookId }) => {
   return (
     <div className="card col-lg-2 col-sm-12 m-1">
-      <Link className="book-card-link" to="/book-page">
-        <motion.div whileHover={{ scale: 1.2 }}className="card-img-container"> 
+      <Link className="book-card-link" to={`/book-page/${bookId}`}>
+        <motion.div whileHover={{ scale: 1.2 }} className="card-img-container">
           <img src={coverImg} alt="Book Cover" className="card-img" />
           <div className="card-hover-content">
             <h5 className="card-title">{title}</h5>

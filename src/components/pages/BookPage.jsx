@@ -1,16 +1,10 @@
 import React from "react";
 import bookCoverDemo from "../../assets/bookCoverDemo.jpeg";
+import { useParams } from "react-router-dom";
 
-const BookPage = ({handleChange, handleSubmit, books, search}) => {
-  // // Mock data for demonstration
-  // const mockBook = {
-  //   title: "Sample Book Title",
-  //   author: "John Doe",
-  //   year: 1900,
-  //   description:
-  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et tellus vitae massa posuere viverra.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et tellus vitae massa posuere viverra.",
-  //   rating: 1, // Assuming this is a number out of 5
-  // };
+const BookPage = ({ handleChange, handleSubmit, books, search }) => {
+  const { bookId } = useParams();
+  const selectedBook = books.find((book) => book.id === bookId);
 
   // Function to render stars
   const renderStars = (rating) => {

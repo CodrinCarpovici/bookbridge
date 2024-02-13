@@ -5,8 +5,6 @@ import BookCard from "./BookCard";
 import bookCoverDemo from "../assets/bookCoverDemo.jpeg";
 
 const Header = ({ handleChange, handleSubmit, books, search }) => {
-
-  
   return (
     <header
       className="header-background d-flex flex-column justify-content-center align-items-center text-center"
@@ -25,10 +23,9 @@ const Header = ({ handleChange, handleSubmit, books, search }) => {
           handleChange={handleChange}
           handleSubmit={handleSubmit}
         />
-        </div>
+      </div>
 
-        <div className="row d-flex justify-content-center mt-4">
-
+      <div className="row d-flex justify-content-center mt-4">
         {books && books.length > 0 ? (
           books.map((book) => (
             <BookCard
@@ -43,6 +40,7 @@ const Header = ({ handleChange, handleSubmit, books, search }) => {
                 book.volumeInfo.authors ? book.volumeInfo.authors[0] : "Unknown"
               }
               releaseYear={book.volumeInfo.publishedDate}
+              bookId={book.id}
             />
           ))
         ) : (

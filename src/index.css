@@ -48,6 +48,9 @@ li a {
 }
 
 /*HOMEPAGE*/
+.homepage {
+  overflow-x: hidden;
+}
 
 /*HEADER*/
 /* Header.css */

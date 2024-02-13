@@ -25,13 +25,18 @@ const BookPage = ({ handleChange, handleSubmit, books, search }) => {
     // + logic to actually add the book to the user's bookshelf
   };
 
+  console.log(selectedBook.volumeInfo.averageRating);
   return (
     <div className="container mt-4" id="main-content">
       <div className="row">
         <div className="col-md-4 text-center d-flex align-items-center justify-content-center">
           {/* Book cover image */}
           <img
-            src={bookCoverDemo}
+            src={
+              selectedBook.volumeInfo.imageLinks
+                ? selectedBook.volumeInfo.imageLinks.thumbnail
+                : bookCoverDemo
+            }
             id="book-image"
             alt="Book Cover"
             className="img-fluid"
@@ -39,19 +44,28 @@ const BookPage = ({ handleChange, handleSubmit, books, search }) => {
         </div>
         <div className="col-md-8" id="details-container">
           {/* Book details */}
-          <h2 id="book-title">{books.title}</h2>
+          <h2 id="book-title">{selectedBook.volumeInfo.title}</h2>
           <p id="book-author">
-            <strong>Author:</strong> {books.author}
+            <strong>Author:</strong>{" "}
+            {selectedBook.volumeInfo.authors
+              ? selectedBook.volumeInfo.authors[0]
+              : "Unknown"}
           </p>
           <p id="book-year">
-            <strong>Year:</strong> {books.year}
+            <strong>Year:</strong> {selectedBook.volumeInfo.publishedDate}
           </p>
           <p id="book-description">
-            <strong>Description:</strong> {books.description}
+            <strong>Description:</strong> {selectedBook.volumeInfo.description}
           </p>
           <div id="book-rating">
             <strong>Rating:</strong>
-            <span className="ml-2">{renderStars(books.rating)}</span>
+            <span className="ml-2">
+              {renderStars(
+                selectedBook.volumeInfo.averageRating
+                  ? selectedBook.volumeInfo.averageRating
+                  : 3
+              )}
+            </span>
           </div>
           {/* Add to Bookshelf button */}
           <button

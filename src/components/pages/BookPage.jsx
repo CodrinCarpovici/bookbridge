@@ -73,7 +73,7 @@ const BookPage = ({ handleChange, handleSubmit, books, search }) => {
             onClick={addToBookshelf}
             id="button-shelf"
           >
-            Add to your Book Shelf
+            Add to Book Shelf
           </button>
         </div>
       </div>

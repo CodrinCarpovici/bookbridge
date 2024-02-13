@@ -1,14 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,200&family=Space+Grotesk&display=swap");
 @import "@fortawesome/fontawesome-free/css/all.css";
 
-/* Add this at the bottom of your CSS file */
-/* Add this at the bottom of your CSS file */
-@media (max-width: 768px) {
-  #header-subtitle {
-    display: none;
-  }
-}
-
 :root {
   --font-family: "Times New Roman", Times, serif;
   --font-color: black;
@@ -88,9 +80,8 @@ li a {
 
 /*BOOKCARD*/
 .card {
-  width: 25rem;
+  width: 15rem;
 }
-
 .card-img-container {
   position: relative;
   overflow: hidden;
@@ -162,6 +153,12 @@ li a {
   margin-top: 20px;
 }
 
+.card {
+  width: 73%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
 .card-body {
   padding: 15px;
   margin-top: 5px;
@@ -174,7 +171,7 @@ li a {
 
 /*CONTACT*/
 .contact-form {
-  width: 55%;
+  width: 75%;
   margin: 0 auto;
   padding: 20px;
   background-color: #d5c8b8;
@@ -259,22 +256,22 @@ li a {
 
 #button-shelf {
   font-family: var(--font-family);
-  background-color: #333;
-  border-color: #333;
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-radius: 4px;
-  padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+  background-color: #333; 
+  border-color: #333; 
+  color: #fff; 
+  font-weight: bold; 
+  text-transform: uppercase; 
+  letter-spacing: 1px; 
+  border-radius: 4px; 
+  padding: 10px 20px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease; 
 }
 
 #button-shelf:hover {
-  background-color: #555;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: #555; 
+  transform: translateY(-2px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 }
 
 /*FOOTER*/

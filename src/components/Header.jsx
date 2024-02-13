@@ -2,9 +2,11 @@ import React from "react";
 import headerImg from "../assets/headerphoto.jpeg";
 import SearchBar from "./SearchBar";
 import BookCard from "./BookCard";
-import bookCoverDemo from "../assets/bookCoverDemo.jpeg"
+import bookCoverDemo from "../assets/bookCoverDemo.jpeg";
 
 const Header = ({ handleChange, handleSubmit, books, search }) => {
+
+  
   return (
     <header
       className="header-background d-flex flex-column justify-content-center align-items-center text-center"
@@ -23,13 +25,18 @@ const Header = ({ handleChange, handleSubmit, books, search }) => {
           handleChange={handleChange}
           handleSubmit={handleSubmit}
         />
+        </div>
+
+        <div className="row d-flex justify-content-center mt-4">
+
         {books && books.length > 0 ? (
           books.map((book) => (
             <BookCard
               key={book.id}
-              coverImg={book.volumeInfo.imageLinks
-              
-                ? book.volumeInfo.imageLinks.thumbnail : bookCoverDemo
+              coverImg={
+                book.volumeInfo.imageLinks
+                  ? book.volumeInfo.imageLinks.thumbnail
+                  : bookCoverDemo
               }
               title={book.volumeInfo.title}
               author={
@@ -39,7 +46,7 @@ const Header = ({ handleChange, handleSubmit, books, search }) => {
             />
           ))
         ) : (
-          <p>No books found</p>
+          <p></p>
         )}
       </div>
     </header>

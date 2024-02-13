@@ -28,7 +28,7 @@ const About = () => {
           <img src="src/assets/second-card.jpeg" className="card-img-top about-card-img" alt="Image 2" />
             <div className="card-body about-card-body">
               <h5 className="card-title about-card-title">Who is BookBridge for?</h5>
-              <p className="card-text about-card-text"> Empower your mind with our book library website, a versatile resource for students, professionals, and book lovers alike. Dive into captivating narratives, enrich your studies, and explore endless learning opportunities at your fingertips.</p>
+              <p className="card-text about-card-text"> Our book library website is a versatile resource for students, professionals, and book lovers alike. Dive into captivating narratives, enrich your studies, and explore endless learning opportunities at your fingertips.</p>
             </div>
           </div>
         </div>

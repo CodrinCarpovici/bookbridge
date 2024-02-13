@@ -147,26 +147,27 @@ li a {
 }
 
 /*Cards within About*/
-.card {
+.about-card {
   width: 73%;
   margin-bottom: 20px;
   margin-top: 20px;
+  overflow: hidden;
 }
 
-.card {
-  width: 73%;
-  margin-bottom: 20px;
-  margin-top: 20px;
+.about-card:hover .card-img-top {
+  transform: scale(1.1); 
+  transition: transform 0.3s ease; 
 }
 
-.card-body {
+.about-card .card-body {
   padding: 15px;
   margin-top: 5px;
 }
 
-.card-img-top {
+.about-card .card-img-top {
   height: 150px;
   object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 /*CONTACT*/

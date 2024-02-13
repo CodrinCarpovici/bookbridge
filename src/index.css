@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,200&family=Space+Grotesk&display=swap");
 @import "@fortawesome/fontawesome-free/css/all.css";
 
+/* Add this at the bottom of your CSS file */
+/* Add this at the bottom of your CSS file */
+@media (max-width: 768px) {
+  #header-subtitle {
+    display: none;
+  }
+}
+
 :root {
   --font-family: "Times New Roman", Times, serif;
   --font-color: black;
@@ -142,9 +150,10 @@ li a {
 /*ABOUT*/
 .about-page {
   max-width: 95%;
-  margin: 0 auto;
   padding: 12px;
   margin-bottom: 15px;
+  margin-left: 70px;
+  margin-right: 70px;
 }
 .about-section {
   background: url("/src/assets/aboutimage.webp");
@@ -174,22 +183,21 @@ li a {
 } */
 /* 
 .card-body {
-  padding: 10px;
+  padding: 15px;
   margin-top: 5px;
 }
 
 .card-img-top {
-  height: 200px;
+  height: 150px;
   object-fit: cover;
 } */
 
 /*CONTACT*/
 .contact-form {
-  max-width: 550px;
+  width: 75%;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 5px;
+  background-color: #d5c8b8;
   margin-top: 40px;
 }
 
@@ -203,8 +211,7 @@ li a {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #959292;
-  border-radius: 3px;
+  border: 1px solid #d5c8b8;
 }
 
 .contact-form textarea {
@@ -272,22 +279,22 @@ li a {
 
 #button-shelf {
   font-family: var(--font-family);
-  background-color: #333; 
-  border-color: #333; 
-  color: #fff; 
-  font-weight: bold; 
-  text-transform: uppercase; 
-  letter-spacing: 1px; 
-  border-radius: 4px; 
-  padding: 10px 20px; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease; 
+  background-color: #333;
+  border-color: #333;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease;
 }
 
 #button-shelf:hover {
-  background-color: #555; 
-  transform: translateY(-2px); 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  background-color: #555;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /*FOOTER*/

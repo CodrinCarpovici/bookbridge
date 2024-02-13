@@ -10,7 +10,7 @@ import Navbar from "./components/Navbar";
 function App() {
   const [search, setSearch] = useState("");
   const [books, setBooks] = useState([]);
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
   const apiKey = "AIzaSyBaXf-WaFNjuXH_bgd4jUptijqnQjKFmMk";
 
@@ -24,7 +24,7 @@ function App() {
 
   const fetchData = () => {
     const fetchBooks = async () => {
-      setLoading(true)
+      setLoading(true);
       try {
         const response = await fetch(
           `https://www.googleapis.com/books/v1/volumes?q=${search}&key=${apiKey}`
@@ -37,9 +37,9 @@ function App() {
         console.log(data.items);
       } catch (error) {
         console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false);
       }
-      finally {
-        setLoading(false)}
     };
     if (search !== "") {
       fetchBooks();
@@ -63,7 +63,7 @@ function App() {
         />
         <Route path="/about" element={<About />} />
         <Route
-          path="/book-page"
+          path="/book-page/:bookId"
           element={
             <BookPage
               search={search}

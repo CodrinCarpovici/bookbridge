@@ -83,12 +83,12 @@ li a {
 
 /*BOOKCARD*/
 .card {
-  max-width: 250px; 
+  max-width: 250px;
   width: 100%;
   padding: 0 !important;
   border-radius: 10px;
 }
-.book-card-link{
+.book-card-link {
   height: 100%;
 }
 .card-img-container {
@@ -137,7 +137,6 @@ li a {
 .card:hover .card-hover-content {
   opacity: 1;
 }
-
 
 /*ABOUT*/
 .about-page {
@@ -227,7 +226,7 @@ li a {
 /*BOOKPAGE*/
 #book-image {
   max-width: 400px;
-  height: 500px;
+  height: 450px;
 }
 
 #main-content {

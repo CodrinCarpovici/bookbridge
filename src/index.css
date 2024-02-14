@@ -178,8 +178,8 @@ li a {
   max-width: 95%;
   padding: 12px;
   margin-bottom: 15px;
-  margin-left: 70px;
-  margin-right: 70px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .about-section {
   background: url("/src/assets/aboutimage.webp");
@@ -202,28 +202,47 @@ li a {
   text-align: center;
 }
 
-/*Cards within About*/
-/* .card {
-  margin-bottom: 20px;
-  margin-top: 10px;
-} */
-/* 
-.card-body {
-  padding: 15px;
-  margin-top: 5px;
+@media (max-width: 768px) {
+  .about-card{
+    width: 100%; /*making cards full width on small devices*/
+}
+.about-section {
+  padding: 10px; /*padding for smaller screens*/
+}
 }
 
-.card-img-top {
-  height: 150px;
+/*Cards within About*/
+.about-card {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.about-card:hover {
+  transform: scale(1.1); /* enlarge the card on hover */
+}
+.about-card .card-title {
+  padding: 10px;
+}
+.about-card .card-img-top{
+  height: 200px;
   object-fit: cover;
-} */
+}
+.about-card .card-body { 
+  padding: 10px;
+  margin-top: 5px;
+}
+.custom-card-width {
+  width: 90%; 
+}
 
 /*CONTACT*/
 .contact-form {
-  width: 75%;
+  width: 40%;
   margin: 0 auto;
   padding: 20px;
-  background-color: #d5c8b8;
+  background-color: var(--background--color);
   margin-top: 40px;
 }
 
@@ -237,7 +256,7 @@ li a {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #d5c8b8;
+  border: 1px solid var(--background--color);
 }
 
 .contact-form textarea {
@@ -245,18 +264,40 @@ li a {
 }
 
 .contact-form button {
-  width: 70%;
+  width: 40%;
   padding: 10px 20px;
   background-color: rgb(40, 114, 40);
   color: #fff;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  margin-left: 13.9%; /*submit button in the middle of the form*/
+  margin-left: 30%; /*submit button in the middle of the form*/
 }
 
 .contact-form button:hover {
   background-color: rgb(123, 148, 86);
+}
+@media (max-width:768px) {
+  .contact-form {
+    width: 100%;
+    padding: 10px;
+  }
+}
+/* Media query for screens with a width of 800px and height of 1280px */
+@media (min-width: 800px) and (min-height: 1280px) {
+  .contact-form {
+    width: 65%;
+  }
+}
+@media (min-width: 768px) and (min-height: 1024px) {
+  .contact-form {
+    width: 65%;
+  }
+}
+@media (min-width: 712px) and (min-height: 1138px) {
+  .contact-form {
+    width: 85%;
+  }
 }
 
 /*BOOKPAGE*/

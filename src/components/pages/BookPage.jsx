@@ -19,10 +19,9 @@ const BookPage = ({ handleChange, handleSubmit, books, search }) => {
     return stars;
   };
 
-  // Mock function to simulate adding a book to the bookshelf
   const addToBookshelf = () => {
-    alert(`${mockBook.title} was added to your bookshelf!`);
-    // + logic to actually add the book to the user's bookshelf
+    const storedBooks = JSON.parse(localStorage.getItem("books")) || [];
+    localStorage.setItem("books", JSON.stringify([...storedBooks, selectedBook]));
   };
 
   console.log(selectedBook.volumeInfo.averageRating);

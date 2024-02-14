@@ -46,6 +46,14 @@ const Bookshelf = () => {
                 <p className="card-text book-card-text">
                   {book.volumeInfo.publishedDate}
                 </p>
+                <select
+                  value={book.status}
+                  onChange={(e) => handleStatusChange(index, e.target.value)}
+                >
+                  <option value="to read">To Read</option>
+                  <option value="reading">Reading</option>
+                  <option value="read">Read</option>
+                </select>
               </div>
             </motion.div>
           </div>

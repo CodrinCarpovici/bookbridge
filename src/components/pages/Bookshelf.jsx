@@ -1,3 +1,5 @@
+// Bookshelf.js
+
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
@@ -13,8 +15,9 @@ const Bookshelf = () => {
     const updatedBooks = [...books];
     updatedBooks[index].status = status;
     setBooks(updatedBooks);
+    localStorage.setItem("books", JSON.stringify(updatedBooks));
   };
-
+  
   return (
     <div>
       <h1>My Bookshelf</h1>
@@ -37,16 +40,16 @@ const Bookshelf = () => {
                 alt="Book Cover"
                 className="card-img book-card-img"
               />
-              <div className="card-hover-content">
-                <h5 className="card-title book-card-title">
+              <div className={`card-hover-content ${book.status}`}>
+                <h5 className="card-title book-card-title small-card">
                   {book.volumeInfo.title}
                 </h5>
-                <p className="card-text book-card-text">
+                <p className="card-text book-card-text small-card">
                   {book.volumeInfo.authors
                     ? book.volumeInfo.authors[0]
                     : "Unknown"}
                 </p>
-                <p className="card-text book-card-text">
+                <p className="card-text book-card-text small-card">
                   {book.volumeInfo.publishedDate}
                 </p>
                 <select

@@ -41,6 +41,7 @@ const Header = ({ handleChange, handleSubmit, books, search }) => {
               }
               releaseYear={book.volumeInfo.publishedDate}
               bookId={book.id}
+              books={books}
             />
           ))
         ) : (

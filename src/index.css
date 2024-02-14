@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,200&family=Space+Grotesk&display=swap");
 @import "@fortawesome/fontawesome-free/css/all.css";
 
+/* Add this at the bottom of your CSS file */
+/* Add this at the bottom of your CSS file */
+@media (max-width: 768px) {
+  #header-subtitle {
+    display: none;
+  }
+}
+
 :root {
   --font-family: "Times New Roman", Times, serif;
   --font-color: black;
@@ -82,32 +90,40 @@ li a {
 }
 
 /*BOOKCARD*/
-.book-card {
-  max-width: 250px;
+.card {
+  max-width: 250px; 
   width: 100%;
   padding: 0 !important;
   border-radius: 10px;
 }
-.book-card-link {
+.book-card-link{
   height: 100%;
 }
-.book-card-img-container {
+.card-img-container {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
   height: 100% !important;
 }
 
-.book-card-img {
+.card-img {
   width: 100%;
   height: 100%;
-  /* max-height: 300px; */
   object-fit: cover;
   filter: blur(0);
   transition: filter 0.3s ease-in-out;
-  /* object-fit: cover !important; */
-  /* max-height: 300px; */
+  
 }
+
+@media (max-width: 575px) {
+  .book-card-img {
+    max-width: 60% !important;
+    max-height: 60% !important;
+  }
+  /* .book-card .book-card-img-container {
+    height: auto !important;  */
+  }
+
 
 .card-hover-content {
   position: absolute;
@@ -130,13 +146,14 @@ li a {
   font-size: 12px;
 }
 
-.book-card:hover .card-img {
+.card:hover .card-img {
   filter: blur(3px);
 }
 
-.book-card:hover .card-hover-content {
+.card:hover .card-hover-content {
   opacity: 1;
 }
+
 
 /*ABOUT*/
 .about-page {
@@ -168,23 +185,20 @@ li a {
 }
 
 /*Cards within About*/
-.about-card {
-  width: 73%;
+/* .card {
   margin-bottom: 20px;
-  margin-top: 20px;
-  overflow: hidden;
-}
-
-.about-card:hover .card-img-top {
-  transform: scale(1.1); 
-  transition: transform 0.3s ease; 
-}
-
-.about-card .card-body { 
+  margin-top: 10px;
+} */
+/* 
+.card-body {
   padding: 15px;
   margin-top: 5px;
 }
 
+.card-img-top {
+  height: 150px;
+  object-fit: cover;
+} */
 
 /*CONTACT*/
 .contact-form {
@@ -230,7 +244,7 @@ li a {
 /*BOOKPAGE*/
 #book-image {
   max-width: 400px;
-  height: 450px;
+  height: 500px;
 }
 
 #main-content {
@@ -273,22 +287,22 @@ li a {
 
 #button-shelf {
   font-family: var(--font-family);
-  background-color: #333; 
-  border-color: #333; 
-  color: #fff; 
-  font-weight: bold; 
-  text-transform: uppercase; 
-  letter-spacing: 1px; 
-  border-radius: 4px; 
-  padding: 10px 20px; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease; 
+  background-color: #333;
+  border-color: #333;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease;
 }
 
 #button-shelf:hover {
-  background-color: #555; 
-  transform: translateY(-2px); 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  background-color: #555;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /*FOOTER*/

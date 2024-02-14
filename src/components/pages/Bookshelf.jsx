@@ -44,6 +44,7 @@ const Bookshelf = () => {
     });
   };
 
+  // Rendering books in a grid based on category
   const renderBooksGrid = (category) => {
     const filteredBooks = filterBooksByCategory(category);
     return (
@@ -53,7 +54,7 @@ const Bookshelf = () => {
           {filteredBooks.map((book, index) => (
             <div
               key={book.id + "/Bookshelf"}
-              className="card book-card col-lg-2 col-sm-12 m-1"
+              className="card book-card col-lg-2 col-md-3 col-sm-4 col-xs-12 ml-1 mb-2"
             >
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -95,6 +96,12 @@ const Bookshelf = () => {
         </div>
       </div>
     );
+  };
+
+   // Function to render books for all categories
+   const renderBooksForAllCategories = () => {
+    const categories = extractCategories();
+    return categories.map(category => renderBooksGrid(category));
   };
 
   return (

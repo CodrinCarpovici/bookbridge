@@ -1,6 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,200&family=Space+Grotesk&display=swap");
 @import "@fortawesome/fontawesome-free/css/all.css";
 
+/*media query for displaying title and title better on smaller screens*/
+@media (max-width: 768px) {
+  #header-title {
+    font-size: 65px !important;
+  }
+
+  #header-subtitle {
+    font-size: 32px !important;
+  }
+}
+
 :root {
   --font-family: "Times New Roman", Times, serif;
   --font-color: black;
@@ -32,8 +43,14 @@ li a {
   font-size: 26px;
   font-family: var(--font-family);
 }
+
+.navbar-container {
+  background-color: rgba(37, 37, 49, 0.85);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
 .navbar-toggler-icon {
-  background-color: white;
+  /* background-color: rgb(60, 61, 60); */
 }
 /* .nav-item {
   color: white !important;
@@ -176,15 +193,14 @@ li a {
 }
 
 .about-card:hover .card-img-top {
-  transform: scale(1.1); 
-  transition: transform 0.3s ease; 
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
-.about-card .card-body { 
+.about-card .card-body {
   padding: 15px;
   margin-top: 5px;
 }
-
 
 /*CONTACT*/
 .contact-form {
@@ -273,27 +289,27 @@ li a {
 
 #button-shelf {
   font-family: var(--font-family);
-  background-color: #333; 
-  border-color: #333; 
-  color: #fff; 
-  font-weight: bold; 
-  text-transform: uppercase; 
-  letter-spacing: 1px; 
-  border-radius: 4px; 
-  padding: 10px 20px; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease; 
+  background-color: #333;
+  border-color: #333;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease;
 }
 
 #button-shelf:hover {
-  background-color: #555; 
-  transform: translateY(-2px); 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  background-color: #555;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /*FOOTER*/
 #footer {
-  background: #333;
+  background-color: rgba(37, 37, 49, 0.85);
   color: white;
   text-align: center;
   padding: 10px 0;

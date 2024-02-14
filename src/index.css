@@ -191,7 +191,7 @@ li a {
   width: 75%;
   margin: 0 auto;
   padding: 20px;
-  background-color: #d5c8b8;
+  background-color: var(--background--color);
   margin-top: 40px;
 }
 

@@ -25,7 +25,7 @@ const Header = ({ handleChange, handleSubmit, books, search }) => {
         />
       </div>
 
-      <div className="row d-flex justify-content-center mt-4">
+      <div className="row d-flex justify-content-center mt-4 px-sm-5">
         {books && books.length > 0 ? (
           books.map((book) => (
             <BookCard

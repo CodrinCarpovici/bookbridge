@@ -9,7 +9,6 @@ const BookCard = ({ books, coverImg, title, author, releaseYear, bookId }) => {
     e.stopPropagation();
     const storedBooks = JSON.parse(localStorage.getItem("books")) || [];
     const selectedBook = books.find((book) => book.id === bookId);
-    console.log("Selected Book:", selectedBook);
     localStorage.setItem(
       "books",
       JSON.stringify([...storedBooks, selectedBook])

@@ -1,45 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-const dummyBooks = [
-  {
-    title: "The Great Gatsby",
-    author: "F. Scott Fitzgerald",
-    status: "to read",
-    category: "Fiction",
-  },
-  {
-    title: "To Kill a Mockingbird",
-    author: "Harper Lee",
-    status: "reading",
-    category: "Fiction",
-  },
-  {
-    title: "1984",
-    author: "George Orwell",
-    status: "read",
-    category: "Science Fiction",
-  },
-  {
-    title: "Pride and Prejudice",
-    author: "Jane Austen",
-    status: "to read",
-    category: "Romance",
-  },
-  {
-    title: "The Hobbit",
-    author: "J.R.R. Tolkien",
-    status: "to read",
-    category: "Fantasy",
-  },
-];
-
 const Bookshelf = () => {
-  const [books, setBooks] = useState(dummyBooks);
+  const [books, setBooks] = useState([]);
 
-  const handleAddBook = (book) => {
-    setBooks([...books, book]);
-  };
+  useEffect(() => {
+    const storedBooks = JSON.parse(localStorage.getItem("books")) || [];
+    setBooks(storedBooks);
+  }, []);
 
   const handleStatusChange = (index, status) => {
     const updatedBooks = [...books];
@@ -52,24 +20,35 @@ const Bookshelf = () => {
       <h1>My Bookshelf</h1>
       <div className="bookshelf">
         {books.map((book, index) => (
-          <motion.div
-            key={index}
-            className="book"
-            layout
-            whileHover={{ scale: 1 }}
-          >
-            <h3>{book.title}</h3>
-            <p>{book.author}</p>
-            <p>Status: {book.status}</p>
-            <select
-              value={book.status}
-              onChange={(e) => handleStatusChange(index, e.target.value)}
+          <div className="card book-card col-lg-2 col-sm-12 m-1">
+            <motion.div
+              whileHover={{ scale: 1.2 }}
+              className="card-img-container book-card-img-container"
             >
-              <option value="to read">To Read</option>
-              <option value="reading">Reading</option>
-              <option value="read">Read</option>
-            </select>
-          </motion.div>
+              <img
+                src={
+                  book.volumeInfo.imageLinks
+                    ? book.volumeInfo.imageLinks.thumbnail
+                    : bookCoverDemo
+                }
+                alt="Book Cover"
+                className="card-img book-card-img"
+              />
+              <div className="card-hover-content">
+                <h5 className="card-title book-card-title">
+                  {book.volumeInfo.title}
+                </h5>
+                <p className="card-text book-card-text">
+                  {book.volumeInfo.authors
+                    ? book.volumeInfo.authors[0]
+                    : "Unknown"}
+                </p>
+                <p className="card-text book-card-text">
+                  {book.volumeInfo.publishedDate}
+                </p>
+              </div>
+            </motion.div>
+          </div>
         ))}
       </div>
     </div>

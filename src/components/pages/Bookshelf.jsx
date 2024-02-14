@@ -17,7 +17,33 @@ const Bookshelf = () => {
     setBooks(updatedBooks);
     localStorage.setItem("books", JSON.stringify(updatedBooks));
   };
-  
+
+  // Function to extract unique categories from books
+  const extractCategories = () => {
+    const categories = new Set();
+    books.forEach((book) => {
+      if (book.volumeInfo.categories) {
+        book.volumeInfo.categories.forEach((category) => {
+          categories.add(category);
+        });
+      }
+    });
+    return Array.from(categories);
+  };
+
+  // Function to filter books by category
+  const filterBooksByCategory = (category) => {
+    return books.filter((book) => {
+      if (
+        book.volumeInfo.categories &&
+        book.volumeInfo.categories.includes(category)
+      ) {
+        return true;
+      }
+      return false;
+    });
+  };
+
   return (
     <div>
       <h1>My Bookshelf</h1>

@@ -6,6 +6,19 @@ const BookPage = ({ handleChange, handleSubmit, books, search }) => {
   const { bookId } = useParams();
   const selectedBook = books.find((book) => book.id === bookId);
 
+  const addToBookshelf = () => {
+    const storedBooks = JSON.parse(localStorage.getItem("books")) || [];
+    const isBookInBookshelf = storedBooks.some(
+      (book) => book.id === selectedBook.id
+    );
+    if (!isBookInBookshelf) {
+      localStorage.setItem(
+        "books",
+        JSON.stringify([...storedBooks, selectedBook])
+      );
+    }
+  };
+
   // Function to render stars
   const renderStars = (rating) => {
     let stars = [];
@@ -17,11 +30,6 @@ const BookPage = ({ handleChange, handleSubmit, books, search }) => {
       );
     }
     return stars;
-  };
-
-  const addToBookshelf = () => {
-    const storedBooks = JSON.parse(localStorage.getItem("books")) || [];
-    localStorage.setItem("books", JSON.stringify([...storedBooks, selectedBook]));
   };
 
   console.log(selectedBook.volumeInfo.averageRating);

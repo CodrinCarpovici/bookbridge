@@ -188,7 +188,10 @@ li a {
 @media (max-width: 768px) {
   .about-card{
     width: 100%; /*making cards full width on small devices*/
-  }
+}
+.about-section {
+  padding: 10px; /*padding for smaller screens*/
+}
 }
 
 /*CONTACT*/
@@ -230,6 +233,12 @@ li a {
 
 .contact-form button:hover {
   background-color: rgb(123, 148, 86);
+}
+@media (max-width:768px) {
+  .contact-form {
+    width: 100%;
+    padding: 10px;
+  }
 }
 
 /*BOOKPAGE*/

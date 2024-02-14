@@ -67,7 +67,7 @@ li a {
 /*HEADER*/
 /* Header.css */
 .header-background {
-  height: 80vh;
+  background-image: url("/src/assets/headerphoto.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -75,6 +75,9 @@ li a {
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 #header-title {
   font-family: var(--font-family);

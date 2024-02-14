@@ -1,5 +1,4 @@
 import React from "react";
-import headerImg from "../assets/headerphoto.jpeg";
 import SearchBar from "./SearchBar";
 import BookCard from "./BookCard";
 import bookCoverDemo from "../assets/bookCoverDemo.jpeg";
@@ -8,7 +7,6 @@ const Header = ({ handleChange, handleSubmit, books, search }) => {
   return (
     <header
       className="header-background d-flex flex-column justify-content-center align-items-center text-center"
-      style={{ backgroundImage: `url(${headerImg})`, height: "100vh" }}
     >
       <div>
         <h1 id="header-title">BOOK BRIDGE</h1>
@@ -25,7 +23,7 @@ const Header = ({ handleChange, handleSubmit, books, search }) => {
         />
       </div>
 
-      <div className="row d-flex justify-content-center mt-4">
+      <div className="row d-flex justify-content-center mt-4 px-sm-5">
         {books && books.length > 0 ? (
           books.map((book) => (
             <BookCard

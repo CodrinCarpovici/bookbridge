@@ -20,10 +20,10 @@ const BookCard = ({ books, coverImg, title, author, releaseYear, bookId }) => {
     }
   };
   return (
-    <div className="card book-card col-lg-2 col-sm-12 m-1">
+    <div className="card book-card col-lg-2 col-sm-12 m-1 mb-4">
       <Link className="book-card-link" to={`/book-page/${bookId}`}>
         <motion.div
-          whileHover={{ scale: 1.2 }}
+          whileHover={{ scale: 1.1 }}
           className="card-img-container book-card-img-container"
         >
           <img

@@ -98,15 +98,16 @@ const Bookshelf = () => {
     );
   };
 
-   // Function to render books for all categories
-   const renderBooksForAllCategories = () => {
+  // Function to render books for all categories
+  const renderBooksForAllCategories = () => {
     const categories = extractCategories();
-    return categories.map(category => renderBooksGrid(category));
+    return categories.map((category) => renderBooksGrid(category));
   };
 
   return (
     <div>
-      
+      <h1 className="d-flex justify-content-center">My Bookshelf</h1>
+      {renderBooksForAllCategories()}
     </div>
   );
 };

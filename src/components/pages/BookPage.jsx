@@ -2,7 +2,7 @@ import React from "react";
 import bookCoverDemo from "../../assets/bookCoverDemo.jpeg";
 import { useParams } from "react-router-dom";
 
-const BookPage = ({ handleChange, handleSubmit, books, search }) => {
+const BookPage = ({books}) => {
   const { bookId } = useParams();
   const selectedBook = books.find((book) => book.id === bookId);
 
@@ -32,7 +32,6 @@ const BookPage = ({ handleChange, handleSubmit, books, search }) => {
     return stars;
   };
 
-  console.log(selectedBook.volumeInfo.averageRating);
   return (
     <div className="container mt-4" id="main-content">
       <div className="row">

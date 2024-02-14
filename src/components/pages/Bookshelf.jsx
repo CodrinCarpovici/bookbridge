@@ -25,7 +25,7 @@ const Bookshelf = () => {
             className="card book-card col-lg-2 col-sm-12 m-1"
           >
             <motion.div
-              whileHover={{ scale: 1.2 }}
+              whileHover={{ scale: 1.05 }}
               className="card-img-container book-card-img-container"
             >
               <img

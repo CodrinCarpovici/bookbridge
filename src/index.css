@@ -185,6 +185,11 @@ li a {
   margin-top: 5px;
 }
 
+@media (max-width: 768px) {
+  .about-card{
+    width: 100%; /*making cards full width on small devices*/
+  }
+}
 
 /*CONTACT*/
 .contact-form {

@@ -20,10 +20,10 @@ const BookCard = ({ books, coverImg, title, author, releaseYear, bookId }) => {
     }
   };
   return (
-    <div className="card book-card col-lg-2 col-sm-12 m-1 mb-4">
+    <div className="card book-card col-lg-2 col-md-3 col-sm-4 col-xs-12 m-1 mb-4">
       <Link className="book-card-link" to={`/book-page/${bookId}`}>
         <motion.div
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.05 }}
           className="card-img-container book-card-img-container"
         >
           <img
@@ -32,9 +32,9 @@ const BookCard = ({ books, coverImg, title, author, releaseYear, bookId }) => {
             className="card-img book-card-img"
           />
           <div className="card-hover-content">
-            <h5 className="card-title book-card-title">{title}</h5>
-            <p className="card-text book-card-text">{author}</p>
-            <p className="card-text book-card-text">{releaseYear}</p>
+            <h5 className="card-title book-card-title small-card">{title}</h5>
+            <p className="card-text book-card-text small-card">{author}</p>
+            <p className="card-text book-card-text small-card">{releaseYear}</p>
             <button className="btn btn-dark" onClick={addToBookshelf}>
               Add to Bookshelf
             </button>

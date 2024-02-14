@@ -1,8 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,200&family=Space+Grotesk&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@520&display=swap');
+
+
 @import "@fortawesome/fontawesome-free/css/all.css";
+
+/*media query for displaying title and title better on smaller screens*/
+@media (max-width: 768px) {
+  #header-title {
+    font-size: 65px !important;
+  }
+
+  #header-subtitle {
+    font-size: 32px !important;
+  }
+}
 
 :root {
   --font-family: "Times New Roman", Times, serif;
+  --text-card: "Space Grotesk", sans-serif;
   --font-color: black;
   --background--color: #d5c8b8;
 }
@@ -32,8 +47,14 @@ li a {
   font-size: 26px;
   font-family: var(--font-family);
 }
+
+.navbar-container {
+  background-color: rgba(37, 37, 49, 0.85);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
 .navbar-toggler-icon {
-  background-color: white;
+  /* background-color: rgb(60, 61, 60); */
 }
 /* .nav-item {
   color: white !important;
@@ -67,12 +88,6 @@ li a {
   top: 0;
   z-index: 10;
 }
-
-@media (max-width: 768px) {
-  .header-background {
- /* Adjust the height for smaller screens */
-  }
-}
 #header-title {
   font-family: var(--font-family);
   color: black;
@@ -91,32 +106,40 @@ li a {
 }
 
 /*BOOKCARD*/
-.book-card {
-  max-width: 250px;
+.card {
+  max-width: 250px; 
   width: 100%;
   padding: 0 !important;
   border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+ 
 }
-.book-card-link {
+.book-card-link{
   height: 100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
-.book-card-img-container {
+.card-img-container {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
   height: 100% !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  
 }
 
-.book-card-img {
+/* .book-card {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+} */
+.card-img {
   width: 100%;
   height: 100%;
-  /* max-height: 300px; */
   object-fit: cover;
   filter: blur(0);
   transition: filter 0.3s ease-in-out;
-  /* object-fit: cover !important; */
-  /* max-height: 300px; */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  
 }
+
 
 .card-hover-content {
   position: absolute;
@@ -124,7 +147,7 @@ li a {
   left: 0;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(20px);
   border-radius: 10px;
   padding: 10px;
   opacity: 0;
@@ -134,26 +157,38 @@ li a {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: #198754;
+  color: #000000;
   text-align: center;
-  font-size: 12px;
+  font-size: 18px;
+  font-family: var(--text-card);
+  
+
+
+}
+.small-card{
+  background:rgba(255, 255, 255, 30%);
+
+  font-family: var(--text-card);
+
+
 }
 
-.book-card:hover .card-img {
+.card:hover .card-img {
   filter: blur(3px);
 }
 
-.book-card:hover .card-hover-content {
+.card:hover .card-hover-content {
   opacity: 1;
 }
+
 
 /*ABOUT*/
 .about-page {
   max-width: 95%;
   padding: 12px;
   margin-bottom: 15px;
-  margin-left: 70px;
-  margin-right: 70px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .about-section {
   background: url("/src/assets/aboutimage.webp");
@@ -176,31 +211,48 @@ li a {
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .about-card{
+    width: 100%; /*making cards full width on small devices*/
+}
+.about-section {
+  padding: 10px; /*padding for smaller screens*/
+}
+}
+
 /*Cards within About*/
 .about-card {
-  width: 73%;
   margin-bottom: 20px;
   margin-top: 20px;
   overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
 }
 
-.about-card:hover .card-img-top {
-  transform: scale(1.1); 
-  transition: transform 0.3s ease; 
+.about-card:hover {
+  transform: scale(1.1); /* enlarge the card on hover */
 }
-
+.about-card .card-title {
+  padding: 10px;
+}
+.about-card .card-img-top{
+  height: 200px;
+  object-fit: cover;
+}
 .about-card .card-body { 
-  padding: 15px;
+  padding: 10px;
   margin-top: 5px;
 }
-
+.custom-card-width {
+  width: 90%; 
+}
 
 /*CONTACT*/
 .contact-form {
-  width: 75%;
+  width: 40%;
   margin: 0 auto;
   padding: 20px;
-  background-color: #d5c8b8;
+  background-color: var(--background--color);
   margin-top: 40px;
 }
 
@@ -214,7 +266,7 @@ li a {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #d5c8b8;
+  border: 1px solid var(--background--color);
 }
 
 .contact-form textarea {
@@ -222,24 +274,46 @@ li a {
 }
 
 .contact-form button {
-  width: 70%;
+  width: 40%;
   padding: 10px 20px;
   background-color: rgb(40, 114, 40);
   color: #fff;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  margin-left: 13.9%; /*submit button in the middle of the form*/
+  margin-left: 30%; /*submit button in the middle of the form*/
 }
 
 .contact-form button:hover {
   background-color: rgb(123, 148, 86);
 }
+@media (max-width:768px) {
+  .contact-form {
+    width: 100%;
+    padding: 10px;
+  }
+}
+/* Media query for screens with a width of 800px and height of 1280px */
+@media (min-width: 800px) and (min-height: 1280px) {
+  .contact-form {
+    width: 65%;
+  }
+}
+@media (min-width: 768px) and (min-height: 1024px) {
+  .contact-form {
+    width: 65%;
+  }
+}
+@media (min-width: 712px) and (min-height: 1138px) {
+  .contact-form {
+    width: 85%;
+  }
+}
 
 /*BOOKPAGE*/
 #book-image {
   max-width: 400px;
-  height: 450px;
+  height: 500px;
 }
 
 #main-content {
@@ -282,27 +356,27 @@ li a {
 
 #button-shelf {
   font-family: var(--font-family);
-  background-color: #333; 
-  border-color: #333; 
-  color: #fff; 
-  font-weight: bold; 
-  text-transform: uppercase; 
-  letter-spacing: 1px; 
-  border-radius: 4px; 
-  padding: 10px 20px; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease; 
+  background-color: #333;
+  border-color: #333;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease;
 }
 
 #button-shelf:hover {
-  background-color: #555; 
-  transform: translateY(-2px); 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  background-color: #555;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /*FOOTER*/
 #footer {
-  background: #333;
+  background-color: rgba(37, 37, 49, 0.85);
   color: white;
   text-align: center;
   padding: 10px 0;

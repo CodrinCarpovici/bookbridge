@@ -167,24 +167,6 @@ li a {
   text-align: center;
 }
 
-/*Cards within About*/
-.about-card {
-  width: 73%;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  overflow: hidden;
-}
-
-.about-card:hover .card-img-top {
-  transform: scale(1.1); 
-  transition: transform 0.3s ease; 
-}
-
-.about-card .card-body { 
-  padding: 15px;
-  margin-top: 5px;
-}
-
 @media (max-width: 768px) {
   .about-card{
     width: 100%; /*making cards full width on small devices*/
@@ -193,6 +175,28 @@ li a {
   padding: 10px; /*padding for smaller screens*/
 }
 }
+
+/*Cards within About*/
+.about-card {
+  width: 73%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+.about-card .card-img-top{
+  height: 200px;
+  object-fit: cover;
+}
+.about-card:hover .card-img-top {
+  transform: scale(1.1); 
+  transition: transform 0.3s ease; 
+}
+
+.about-card .card-body { 
+  padding: 10px;
+  margin-top: 5px;
+}
+
 
 /*CONTACT*/
 .contact-form {

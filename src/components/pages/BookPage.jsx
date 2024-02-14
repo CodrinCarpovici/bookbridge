@@ -6,6 +6,19 @@ const BookPage = ({ handleChange, handleSubmit, books, search }) => {
   const { bookId } = useParams();
   const selectedBook = books.find((book) => book.id === bookId);
 
+  const addToBookshelf = () => {
+    const storedBooks = JSON.parse(localStorage.getItem("books")) || [];
+    const isBookInBookshelf = storedBooks.some(
+      (book) => book.id === selectedBook.id
+    );
+    if (!isBookInBookshelf) {
+      localStorage.setItem(
+        "books",
+        JSON.stringify([...storedBooks, selectedBook])
+      );
+    }
+  };
+
   // Function to render stars
   const renderStars = (rating) => {
     let stars = [];
@@ -17,12 +30,6 @@ const BookPage = ({ handleChange, handleSubmit, books, search }) => {
       );
     }
     return stars;
-  };
-
-  // Mock function to simulate adding a book to the bookshelf
-  const addToBookshelf = () => {
-    alert(`${mockBook.title} was added to your bookshelf!`);
-    // + logic to actually add the book to the user's bookshelf
   };
 
   console.log(selectedBook.volumeInfo.averageRating);

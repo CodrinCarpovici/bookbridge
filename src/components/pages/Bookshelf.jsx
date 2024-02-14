@@ -20,7 +20,10 @@ const Bookshelf = () => {
       <h1>My Bookshelf</h1>
       <div className="bookshelf">
         {books.map((book, index) => (
-          <div key={book.id + "/Bookshelf"} className="card book-card col-lg-2 col-sm-12 m-1">
+          <div
+            key={book.id + "/Bookshelf"}
+            className="card book-card col-lg-2 col-sm-12 m-1"
+          >
             <motion.div
               whileHover={{ scale: 1.2 }}
               className="card-img-container book-card-img-container"

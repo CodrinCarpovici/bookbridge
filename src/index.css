@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,200&family=Space+Grotesk&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@520&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@520&display=swap");
 @import "@fortawesome/fontawesome-free/css/all.css";
 
 /*media query for displaying title and title better on smaller screens*/
@@ -23,9 +21,6 @@
 }
 
 /*Document*/
-* {
-}
-
 html,
 body,
 #root {
@@ -52,13 +47,6 @@ li a {
   background-color: rgba(37, 37, 49, 0.85);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
-
-.navbar-toggler-icon {
-  /* background-color: rgb(60, 61, 60); */
-}
-/* .nav-item {
-  color: white !important;
-} */
 
 .navbar a:hover {
   color: #0e7474 !important;
@@ -107,14 +95,13 @@ li a {
 
 /*BOOKCARD*/
 .card {
-  max-width: 250px; 
+  max-width: 250px;
   width: 100%;
   padding: 0 !important;
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
- 
 }
-.book-card-link{
+.book-card-link {
   height: 100%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
@@ -124,7 +111,6 @@ li a {
   border-radius: 10px;
   height: 100% !important;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  
 }
 
 /* .book-card {
@@ -137,9 +123,7 @@ li a {
   filter: blur(0);
   transition: filter 0.3s ease-in-out;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-  
 }
-
 
 .card-hover-content {
   position: absolute;
@@ -161,16 +145,11 @@ li a {
   text-align: center;
   font-size: 18px;
   font-family: var(--text-card);
-  
-
-
 }
-.small-card{
-  background:rgba(255, 255, 255, 30%);
+.small-card {
+  background: rgba(255, 255, 255, 30%);
 
   font-family: var(--text-card);
-
-
 }
 
 .card:hover .card-img {
@@ -180,7 +159,6 @@ li a {
 .card:hover .card-hover-content {
   opacity: 1;
 }
-
 
 /*ABOUT*/
 .about-page {
@@ -212,12 +190,12 @@ li a {
 }
 
 @media (max-width: 768px) {
-  .about-card{
+  .about-card {
     width: 100%; /*making cards full width on small devices*/
-}
-.about-section {
-  padding: 10px; /*padding for smaller screens*/
-}
+  }
+  .about-section {
+    padding: 10px; /*padding for smaller screens*/
+  }
 }
 
 /*Cards within About*/
@@ -235,16 +213,16 @@ li a {
 .about-card .card-title {
   padding: 10px;
 }
-.about-card .card-img-top{
+.about-card .card-img-top {
   height: 200px;
   object-fit: cover;
 }
-.about-card .card-body { 
+.about-card .card-body {
   padding: 10px;
   margin-top: 5px;
 }
 .custom-card-width {
-  width: 90%; 
+  width: 90%;
 }
 
 /*CONTACT*/
@@ -287,7 +265,7 @@ li a {
 .contact-form button:hover {
   background-color: rgb(123, 148, 86);
 }
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .contact-form {
     width: 100%;
     padding: 10px;

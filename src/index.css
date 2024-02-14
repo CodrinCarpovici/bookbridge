@@ -4,11 +4,14 @@
 
 @import "@fortawesome/fontawesome-free/css/all.css";
 
-/* Add this at the bottom of your CSS file */
-/* Add this at the bottom of your CSS file */
+/*media query for displaying title and title better on smaller screens*/
 @media (max-width: 768px) {
+  #header-title {
+    font-size: 65px !important;
+  }
+
   #header-subtitle {
-    display: none;
+    font-size: 32px !important;
   }
 }
 
@@ -44,8 +47,14 @@ li a {
   font-size: 26px;
   font-family: var(--font-family);
 }
+
+.navbar-container {
+  background-color: rgba(37, 37, 49, 0.85);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
 .navbar-toggler-icon {
-  background-color: white;
+  /* background-color: rgb(60, 61, 60); */
 }
 /* .nav-item {
   color: white !important;
@@ -219,6 +228,7 @@ li a {
   position: relative;
   transition: transform 0.3s ease;
 }
+
 .about-card:hover {
   transform: scale(1.1); /* enlarge the card on hover */
 }
@@ -366,7 +376,7 @@ li a {
 
 /*FOOTER*/
 #footer {
-  background: #333;
+  background-color: rgba(37, 37, 49, 0.85);
   color: white;
   text-align: center;
   padding: 10px 0;

@@ -213,14 +213,14 @@ li a {
 }
 
 .contact-form button {
-  width: 70%;
+  width: 40%;
   padding: 10px 20px;
   background-color: rgb(40, 114, 40);
   color: #fff;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  margin-left: 13.9%; /*submit button in the middle of the form*/
+  margin-left: 30%; /*submit button in the middle of the form*/
 }
 
 .contact-form button:hover {

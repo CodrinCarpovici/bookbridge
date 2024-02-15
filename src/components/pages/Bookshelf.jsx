@@ -50,13 +50,16 @@ const Bookshelf = () => {
   const renderBooksGrid = (category) => {
     const filteredBooks = filterBooksByCategory(category);
     return (
-      <div key={category}>
-        <h2>{category}</h2>
-        <div className="row px-sm-5">
+      <div key={category} className="container">
+        <h2 className="d-flex justify-content-center category-title my-4">
+          {category}
+        </h2>
+        <div className="row">
           {filteredBooks.map((book) => (
             <div
               key={book.id + "/Bookshelf"}
-              className="card book-card col-lg-2 col-md-3 col-sm-4 col-xs-12 ml-1 mb-2"
+              id="bookself-card"
+              className="card book-card col-lg-2 col-md-3 col-sm-4 col-xs-12 mx-auto mx-md-1 mb-3"
             >
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -111,8 +114,10 @@ const Bookshelf = () => {
   };
 
   return (
-    <div>
-      <h1 className="d-flex justify-content-center">My Bookshelf</h1>
+    <div className="bookshelf">
+      <h1 className="d-flex justify-content-center bookshelf-title mt-4">
+        My Bookshelf
+      </h1>
       {renderBooksForAllCategories()}
     </div>
   );

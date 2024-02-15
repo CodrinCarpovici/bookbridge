@@ -2,17 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@520&display=swap");
 @import "@fortawesome/fontawesome-free/css/all.css";
 
-/*media query for displaying title and title better on smaller screens*/
-@media (max-width: 768px) {
-  #header-title {
-    font-size: 65px !important;
-  }
-
-  #header-subtitle {
-    font-size: 32px !important;
-  }
-}
-
 :root {
   --font-family: "Times New Roman", Times, serif;
   --text-card: "Space Grotesk", sans-serif;
@@ -61,7 +50,6 @@ li a {
 }
 
 /*HEADER*/
-/* Header.css */
 .header-background {
   background-image: url("/src/assets/headerphoto.jpeg");
   background-size: cover;
@@ -86,8 +74,19 @@ li a {
   color: black;
   font-size: 60px;
 }
-/*SEARCHBAR*/
 
+/*media query for displaying title and title better on smaller screens*/
+@media (max-width: 768px) {
+  #header-title {
+    font-size: 65px !important;
+  }
+
+  #header-subtitle {
+    font-size: 32px !important;
+  }
+}
+
+/*SEARCHBAR*/
 .form-control {
   margin-right: 10px;
 }
@@ -112,9 +111,19 @@ li a {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* .book-card {
+.book-card {
+  max-width: 300px !important;
+  padding: 0 !important;
+  border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-} */
+}
+
+@media (max-width: 768px) {
+  .book-card {
+    max-width: 210px !important;
+  }
+}
+
 .card-img {
   width: 100%;
   height: 100%;
@@ -356,6 +365,18 @@ li a {
 }
 
 /*BOOKSHELF*/
+.bookshelf {
+  font-family: var(--font-family);
+  overflow-x: hidden;
+}
+
+.bookshelf-title {
+  text-transform: uppercase;
+}
+
+#bookself-card {
+  width: 200px !important;
+}
 /* Each status has a coresponding rgba value */
 .to-read {
   background-color: rgba(255, 127, 127, 0.4);

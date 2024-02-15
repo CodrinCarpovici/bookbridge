@@ -62,7 +62,9 @@ li a {
   position: sticky;
   top: 0;
   z-index: 10;
+  min-height: 85.6vh;
 }
+
 #header-title {
   font-family: var(--font-family);
   color: black;

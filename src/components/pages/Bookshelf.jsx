@@ -1,5 +1,3 @@
-// Bookshelf.js
-
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
@@ -11,9 +9,13 @@ const Bookshelf = () => {
     setBooks(storedBooks);
   }, []);
 
-  const handleStatusChange = (index, status) => {
-    const updatedBooks = [...books];
-    updatedBooks[index].status = status;
+  const handleStatusChange = (bookId, status) => {
+    const updatedBooks = books.map((book) => {
+      if (book.id === bookId) {
+        return { ...book, status };
+      }
+      return book;
+    });
     setBooks(updatedBooks);
     localStorage.setItem("books", JSON.stringify(updatedBooks));
   };
@@ -45,13 +47,13 @@ const Bookshelf = () => {
   };
 
   // Rendering books in a grid based on category
-  const renderBooksGrid = (category) => {
+  const renderBooksGrid = (category, categoryIndex) => {
     const filteredBooks = filterBooksByCategory(category);
     return (
       <div key={category}>
         <h2>{category}</h2>
-        <div className="row">
-          {filteredBooks.map((book, index) => (
+        <div className="row px-sm-5">
+          {filteredBooks.map((book, bookIndex) => (
             <div
               key={book.id + "/Bookshelf"}
               className="card book-card col-lg-2 col-md-3 col-sm-4 col-xs-12 ml-1 mb-2"
@@ -83,9 +85,11 @@ const Bookshelf = () => {
                   </p>
                   <select
                     value={book.status}
-                    onChange={(e) => handleStatusChange(index, e.target.value)}
+                    onChange={(e) =>
+                      handleStatusChange(book.id, e.target.value)
+                    }
                   >
-                    <option value="to read">To Read</option>
+                    <option value="to-read">To Read</option>
                     <option value="reading">Reading</option>
                     <option value="read">Read</option>
                   </select>
@@ -101,7 +105,9 @@ const Bookshelf = () => {
   // Function to render books for all categories
   const renderBooksForAllCategories = () => {
     const categories = extractCategories();
-    return categories.map((category) => renderBooksGrid(category));
+    return categories.map((category, index) =>
+      renderBooksGrid(category, index)
+    );
   };
 
   return (

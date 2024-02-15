@@ -23,9 +23,9 @@ After cloning the repository, run `npm install` to get all the required packages
 
 ## Usage
 
-Go To: [https://bookbridge.netlify.app/](bookbridge.netlify.app/) and view the website.  
+Go To: [https://bookbridge.netlify.app/](https://bookbridge.netlify.app/) and view the website.  
 The code repository can be accessed at: [https://github.com/CodrinCarpovici/bookbridge](github.com/CodrinCarpovici/bookbridge)  
-Presentation Link: !!!NEEDS LINK!!!  
+Presentation Link: [https://docs.google.com/presentation/d/1A9QqvmG5bDrTTNqCjdFqe8DuQLxM1GPtnVmuIL4a8yM/edit?usp=sharing](docs.google.com/presentation/d/1A9QqvmG5bDrTTNqCjdFqe8DuQLxM1GPtnVmuIL4a8yM/edit?usp=sharing)
 Open the terminal and run the react app using npm run dev. On the homepage you are presented with a heading, a navbar and a searchbar. On the navbar you can see the link to the About and the Bookshelf page. On the about page there is details on what the web app alows you to do and a Contact form. Back on the homepage, you can type in and search your desired book title or words to find the books you want. You then have the option of clicking on the returned cards and going to a unique page with a unique url where you can view the book in more detail. From the card and from the book page you also have the option to add it to your Bookshelf. From the navbar you can navigate to the Bookshelf page where you will be able to see your saved books separated in different rows based on the category they belong to. Here you have the option to change their status based on wheter you are currently reading the book, have read it or you will read it in the future. This will also change the hove reffect's color to indicate the new status.
 
 ## Contributing

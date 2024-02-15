@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-const SearchBar = ({search, handleChange,handleSubmit}) => {
+const SearchBar = ({ search, handleChange, handleSubmit }) => {
   const handleKeyPress = (event) => {
-    if (event.key === 'Enter') {
+    if (event.key === "Enter") {
       handleSubmit();
-    }}
+    }
+  };
 
   return (
     <div className="container mt-3">
@@ -20,8 +21,12 @@ const SearchBar = ({search, handleChange,handleSubmit}) => {
               onKeyPress={handleKeyPress}
             />
             <div className="input-group-append">
-              <button className="btn btn-dark" type="button" onClick={handleSubmit}>
-              <i className="fas fa-search"></i>
+              <button
+                className="btn btn-dark"
+                type="button"
+                onClick={handleSubmit}
+              >
+                <i className="fas fa-search"></i>
               </button>
             </div>
           </div>

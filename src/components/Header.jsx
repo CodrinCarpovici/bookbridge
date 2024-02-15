@@ -5,9 +5,7 @@ import bookCoverDemo from "../assets/bookCoverDemo.jpeg";
 
 const Header = ({ handleChange, handleSubmit, books, search }) => {
   return (
-    <header
-      className="header-background d-flex flex-column justify-content-center align-items-center text-center"
-    >
+    <header className="header-background d-flex flex-column justify-content-center align-items-center text-center">
       <div>
         <h1 id="header-title">BOOK BRIDGE</h1>
         <h2 id="header-subtitle">

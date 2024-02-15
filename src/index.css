@@ -358,15 +358,15 @@ li a {
 /*BOOKSHELF*/
 /* Each status has a coresponding rgba value */
 .to-read {
-  background-color: rgba(255, 127, 127, 0.4); /* Red for "To Read" */
+  background-color: rgba(255, 127, 127, 0.4);
 }
 
 .reading {
-  background-color: rgba(255, 255, 127, 0.4); /* Yellow for "Reading" */
+  background-color: rgba(255, 255, 127, 0.4);
 }
 
 .read {
-  background-color: rgba(127, 255, 127, 0.4); /* Green for "Read" */
+  background-color: rgba(127, 255, 127, 0.4);
 }
 
 /*FOOTER*/

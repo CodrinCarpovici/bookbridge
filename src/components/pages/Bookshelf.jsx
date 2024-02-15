@@ -47,13 +47,13 @@ const Bookshelf = () => {
   };
 
   // Rendering books in a grid based on category
-  const renderBooksGrid = (category, categoryIndex) => {
+  const renderBooksGrid = (category) => {
     const filteredBooks = filterBooksByCategory(category);
     return (
       <div key={category}>
         <h2>{category}</h2>
         <div className="row px-sm-5">
-          {filteredBooks.map((book, bookIndex) => (
+          {filteredBooks.map((book) => (
             <div
               key={book.id + "/Bookshelf"}
               className="card book-card col-lg-2 col-md-3 col-sm-4 col-xs-12 ml-1 mb-2"
